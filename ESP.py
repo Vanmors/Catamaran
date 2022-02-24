@@ -1,8 +1,8 @@
 import serial
-ser = serial.Serial('/dev/serial0')
+ser = serial.Serial('/dev/ttyUSB0')
 ser.baudrate = 115200
 
-msg = '11001100'
+msg = '12001200'
 msg = msg.encode('utf-8')
 ser.write(msg)
-print("Строка успешно отправлена")
+print("String sended")
