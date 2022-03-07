@@ -1,0 +1,2 @@
+longitude:32.454
+latitude:65.45334
