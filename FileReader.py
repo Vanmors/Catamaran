@@ -1,4 +1,4 @@
-f = open('notes.txt', 'r')  # чтение данных с файла
+f = open('D:\script.txt', 'r')  # чтение данных с файла
 first_string = f.readline()  # чтение первой строки
 second_string = f.readline()  # чтение второй строки
 split1 = first_string.split(':')  # разделение через двоеточие первой строки
