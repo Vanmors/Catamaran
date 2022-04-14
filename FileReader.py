@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-f = open('D:\script.txt', 'r')  # чтение данных с файла
+f = open('/media/pi/My Passport/notes.txt', 'r')  # чтение данных с файла
 
 first_string = f.readline()  # чтение первой строки
 second_string = f.readline()  # чтение второй строки
