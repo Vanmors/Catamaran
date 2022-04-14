@@ -1,16 +1,10 @@
 import serial
+
 ser = serial.Serial('/dev/ttyUSB0')
 ser.baudrate = 115200
 
 
-protocolUART = "S" + motorSpeed() + angleServo() + "E"
-# print(protocolUART)
-protocolUART = protocolUART.encode('utf-8')
-ser.write(protocolUART)
-print("String sended")
-
-
-def motorSpeed():
+def motorSpeed():  # функция для задания скорости моторов
     speed = "99"
     if -1 < int(speed) < 10:
         return "0" + speed
@@ -18,7 +12,7 @@ def motorSpeed():
         return speed
 
 
-def angleServo():
+def angleServo():  # функция для задания угла поворота лепестков
     angle = "180"
     if -1 < int(angle) < 10:
         return "00" + angle
@@ -26,3 +20,10 @@ def angleServo():
         return "0" + angle
     else:
         return angle
+
+
+protocolUART = "S" + motorSpeed() + angleServo() + "E"  # Вызов функций в строку
+# print(protocolUART)
+protocolUART = protocolUART.encode('utf-8')
+ser.write(protocolUART)  # Отправка протокла на ESP
+print("String sended")
